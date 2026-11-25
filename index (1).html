@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Закупка материалов — ООО «Завод Искра»</title>
+  <meta name="description" content="Приглашаем поставщиков сырья и комплектующих к сотрудничеству с ООО «Завод Искра».">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <img src="png/Логотип завода.png" alt="#">
+  <nav class="nav" aria-label="Основная навигация">
+    <ul class="nav__list">
+      <li><a class="nav__link" href="#top">Главная</a></li>
+      <li><a class="nav__link" href="#about">О компании</a></li>
+      <li><a class="nav__link" href="#services">Услуги</a></li>
+      <li><a class="nav__link" href="#contacts">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero__inner">
+      <p class="hero__crumbs">Главная / Закупка материалов</p>
+      <div class="hero__logo" aria-hidden="true">
+        <img src="png/Логотип завода.png" alt="#">
+      </div>
+      <h1 class="hero__title">Закупка материалов<br>для производства</h1>
+      <p class="hero__text">Приглашаем поставщиков сырья и комплектующих<br>к сотрудничеству с ООО «Завод Искра».</p>
+    </div>
+  </section>
+
+  <section class="section materials" id="about">
+    <div class="container">
+      <h2 class="section__title">Какие материалы мы закупаем</h2>
+      <p class="section__text">Направления для предложений поставщиков. Объёмы и спецификации уточняются по заявке.</p>
+
+      <div class="table" role="table" aria-label="Перечень материалов">
+        <div class="table__head" role="row">
+          <span role="columnheader">Материал</span>
+          <span role="columnheader">Назначение</span>
+        </div>
+        <div class="table__row is-alt" role="row">
+          <span class="table__name" role="cell">Полимерное сырьё</span>
+          <span class="table__desc" role="cell">Для производства плит, труб и профилей</span>
+        </div>
+        <div class="table__row" role="row">
+          <span class="table__name" role="cell">Сырьё для пенополистирола</span>
+          <span class="table__desc" role="cell">Для теплоизоляционных плит и декора</span>
+        </div>
+        <div class="table__row is-alt" role="row">
+          <span class="table__name" role="cell">Цемент и минеральные наполнители</span>
+          <span class="table__desc" role="cell">Для гиперпрессованного кирпича</span>
+        </div>
+        <div class="table__row" role="row">
+          <span class="table__name" role="cell">Упаковочные материалы</span>
+          <span class="table__desc" role="cell">Плёнка, поддоны и обвязочная лента</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section conditions" id="services">
+    <div class="container">
+      <h2 class="section__title">Условия сотрудничества</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step__num">01</span>
+          <h3 class="step__title">Качество</h3>
+          <p class="step__text">Укажите характеристики сырья<br>и приложите сертификаты качества.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">02</span>
+          <h3 class="step__title">Поставка</h3>
+          <p class="step__text">Сообщите минимальную партию,<br>сроки и условия доставки.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">03</span>
+          <h3 class="step__title">Стоимость</h3>
+          <p class="step__text">Предложите цену, порядок оплаты<br>и срок действия предложения.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section supplier" id="supplier">
+    <div class="container">
+      <h2 class="section__title">Стать поставщиком</h2>
+      <p class="section__text">Расскажите о ваших материалах — мы рассмотрим предложение<br>и свяжемся с вами для обсуждения деталей.</p>
+
+      <form class="form" id="supplier-form" novalidate>
+        <div class="form__grid">
+          <div class="field">
+            <label for="company" class="field__label">Компания <span class="req">*</span></label>
+            <input id="company" name="company" type="text" class="field__input" placeholder="Название организации" required autocomplete="organization">
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="contact" class="field__label">Контактное лицо <span class="req">*</span></label>
+            <input id="contact" name="contact" type="text" class="field__input" placeholder="Ваше имя" required autocomplete="name">
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="phone" class="field__label">Телефон <span class="req">*</span></label>
+            <input id="phone" name="phone" type="tel" class="field__input" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="email" class="field__label">Электронная почта <span class="req">*</span></label>
+            <input id="email" name="email" type="email" class="field__input" placeholder="mail@company.ru" required autocomplete="email">
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field field--full">
+            <label for="material" class="field__label">Материал <span class="req">*</span></label>
+            <input id="material" name="material" type="text" class="field__input" placeholder="Название и марка материала" required>
+            <p class="field__error" role="alert"></p>
+          </div>
+
+          <div class="field field--full">
+            <label for="offer" class="field__label">Ваше предложение <span class="req">*</span></label>
+            <textarea id="offer" name="offer" class="field__input field__input--area" placeholder="Объём, цена, сроки и условия поставки" required></textarea>
+            <p class="field__error" role="alert"></p>
+          </div>
+        </div>
+
+        <div class="form__file">
+          <label class="file-link" for="file">
+            <span>Прикрепить коммерческое предложение</span>
+            <input id="file" name="file" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx">
+          </label>
+          <span class="file-name" id="file-name"></span>
+        </div>
+
+        <div class="form__actions">
+          <button type="submit" class="btn">Отправить предложение</button>
+        </div>
+
+        <p class="form__consent">Нажимая «Отправить предложение», вы даёте согласие на обработку персональных данных. Поля со * обязательны.</p>
+        <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contacts">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <div class="footer__logo" aria-hidden="true">
+        <img src="png/Логотип завода.png" alt="#">
+      </div>
+      <p class="footer__text">ООО «Завод Искра» - многопрофильное предприятие, оснащенное современным компьютеризированным, производительным, универсальным оборудованием</p>
+    </div>
+    <nav class="footer__nav" aria-label="Меню в подвале">
+      <ul>
+        <li><a href="#top">Главная</a></li>
+        <li><a href="#about">О компании</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
